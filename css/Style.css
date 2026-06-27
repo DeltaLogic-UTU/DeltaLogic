@@ -1,0 +1,67 @@
+/* Fondo degradado */
+body {
+  background: linear-gradient(to top left, #00BFFF, #ffffff,#ffffff);
+  min-height: 100vh;
+  padding-top: 78px;
+}
+
+/* Header */
+header {
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .container {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+.navbar {
+  padding: 0.15rem 0;
+}
+
+/* Logo dibujo */
+.logo {
+  width: 70px;
+}
+
+/* Menú con degradado */
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Intro con logo-nombre */
+.intro-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 30px 40px;
+  margin-top: 0;
+}
+
+.logo-nombre {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
