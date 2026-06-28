@@ -1,14 +1,18 @@
 /* Fondo degradado general de la página */
 body {
-  background: linear-gradient(to top left, #00BFFF, #ffffff, #ffffff);
+  /* Degradado + imagen de fondo (imagen relativa a la carpeta css) */
+  /* poner la imagen primero (capa superior) y el degradado debajo */
+  background-image: url('../recursos/imagenes/Fondo-Dibujo-Red.png'),
+                    linear-gradient(to top left, #00BFFF, #ffffff, #ffffff);
   min-height: 100vh;
   padding-top: 78px;
 
-  /* Imagen de fondo lateral a la izquierda */
-  background-image: url('recursos/imagenes/Fondo-Dibujo-Red.png');
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: 500px auto;
+  /* Configuración por capa: imagen arriba, degradado debajo */
+  background-repeat: no-repeat, no-repeat;
+  /* imagen (capa 1) centrada verticalmente a la izquierda; degradado debajo */
+  background-position: left center, left top;
+  /* aumentar solo la imagen (primera capa) */
+  background-size: 180px auto, cover;
 }
 
 /* Header fijo en la parte superior */
@@ -72,4 +76,5 @@ header .container {
   max-width: 100%;
   height: auto;
   display: block;
+  margin-left: 50px;
 }
