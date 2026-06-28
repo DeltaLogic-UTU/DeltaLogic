@@ -1,26 +1,34 @@
-/* Fondo degradado */
+/* Fondo degradado general de la página */
 body {
-  background: linear-gradient(to top left, #00BFFF, #ffffff,#ffffff);
+  background: linear-gradient(to top left, #00BFFF, #ffffff, #ffffff);
   min-height: 100vh;
   padding-top: 78px;
+
+  /* Imagen de fondo lateral a la izquierda */
+  background-image: url('recursos/imagenes/Fondo-Dibujo-Red.png');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 500px auto;
 }
 
-/* Header */
+/* Header fijo en la parte superior */
 header {
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Reducir el padding del contenedor del header para que sea más fino */
 header .container {
   padding-top: 0.35rem !important;
   padding-bottom: 0.35rem !important;
 }
 
+/* Navbar de Bootstrap: espacio vertical del menú */
 .navbar {
   padding: 0.15rem 0;
 }
 
-/* Logo dibujo */
+/* Tamaño del logo pequeño dentro del header */
 .logo {
   width: 70px;
 }
