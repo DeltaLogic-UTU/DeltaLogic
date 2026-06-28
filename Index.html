@@ -14,9 +14,12 @@
   <header class="shadow-sm bg-white fixed-top">
     <div class="container py-3">
       <nav class="navbar navbar-expand-lg navbar-light bg-white px-0">
-        <!-- Logo principal del header -->
+        <!-- Logo principal del header: logo pequeño + nombre debajo, centrados -->
         <a class="navbar-brand me-3" href="#">
-          <img src="recursos/imagenes/Logo sin nombre.png" alt="Logo Delta Logic" class="logo">
+          <div class="brand-stack">
+            <img src="recursos/imagenes/Logo sin nombre.png" alt="Logo Delta Logic" class="logo">
+            <img src="recursos/imagenes/Delta%20Logic.png" alt="Delta Logic" class="logo-nombre-small">
+          </div>
         </a>
 
         <!-- Botón hamburguesa visible en pantallas pequeñas -->
@@ -37,13 +40,19 @@
     </div>
   </header>
   
-  <!-- Sección de intro principal con logo grande -->
+  <!-- Sección de intro principal con logo grande y texto (responsive con Bootstrap) -->
   <section id="intro" class="intro-section">
-    <img src="recursos/imagenes/Delta Logic.png" alt="Logo Delta Logic" class="logo-nombre">
-  </section>
-
-  <!-- Sección vacía para contenido adicional -->
-  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 d-flex justify-content-md-start justify-content-center mb-3 mb-md-0">
+          <!-- Logo-name moved to header; keep column for spacing but keep it empty -->
+        </div>
+        <div class="col-md-8 text-center text-md-start">
+          <h3 class="titulo-introduccion">Impulsamos tu transformación digital</h3>
+          <p class="introduccion">En Delta Logic convertimos ideas en soluciones tecnológicas reales. Diseñamos y desarrollamos sitios web, tiendas online y sistemas personalizados que potencian la presencia digital de tu empresa, mejoran su rendimiento y optimizan la experiencia de tus clientes.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- FOOTER -->

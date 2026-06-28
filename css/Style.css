@@ -5,7 +5,8 @@ body {
   background-image: url('../recursos/imagenes/Fondo-Dibujo-Red.png'),
                     linear-gradient(to top left, #00BFFF, #ffffff, #ffffff);
   min-height: 100vh;
-  padding-top: 78px;
+  /* espacio para el header fijo (ajustado a la altura real del header) */
+  padding-top: 140px;
 
   /* Configuración por capa: imagen arriba, degradado debajo */
   background-repeat: no-repeat, no-repeat;
@@ -19,6 +20,14 @@ body {
 header {
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1032;
+}
+
+/* Ajuste responsivo: header puede ocupar más alto en móviles (logo + nombre + barra) */
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 180px;
+  }
 }
 
 /* Reducir el padding del contenedor del header para que sea más fino */
@@ -50,6 +59,18 @@ header .container {
   transition: transform 0.3s ease;
 }
 
+.titulo-introduccion{
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-left: 400px;
+}
+
+.introduccion{
+  
+}
 .nav-link:hover {
   transform: scale(1.05);
 }
@@ -72,9 +93,54 @@ header .container {
 }
 
 .logo-nombre {
-  width: 150px;
-  max-width: 100%;
+  /* responsive logo: scales to column width but capped */
+  width: 100%;
+  max-width: 220px;
   height: auto;
   display: block;
-  margin-left: 50px;
+  margin: 0 auto -20px auto;
+}
+
+/* Header brand stack: small logo with name centered beneath */
+.brand-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-nombre-small {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 4px;
+  display: block;
+}
+
+@media (min-width: 992px) {
+  .logo-nombre-small {
+    width: 150px;
+  }
+}
+
+/* Título y párrafo de introducción */
+.titulo-introduccion {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #0b4f73;
+}
+
+.introduccion {
+  max-width: 720px;
+  margin: 0.25rem auto 0 auto;
+  color: #23303a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .introduccion {
+    margin: 0;
+    text-align: left;
+  }
 }
