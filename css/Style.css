@@ -197,4 +197,118 @@ header .container {
   display: block;
 }
 
+/* Sección ¿Quiénes somos? */
+.quienes-somos-section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 80px 30px 40px;
+  gap: 70px;
+}
+
+/* DIV 1: Título y texto */
+.quienes-somos-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.quienes-somos-titulo {
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.quienes-somos-texto {
+  max-width: 720px;
+  margin: 0.25rem auto 0 auto;
+  color: #23303a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* DIV 2: Profile Cards */
+.profile-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 320px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Cuadrado de fondo girado 30° */
+.profile-background {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0e8f2 100%);
+  border-radius: 5px;
+  transform: rotate(30deg);
+  top: 60px;
+  z-index: 1;
+}
+
+/* Cuadrado con la imagen arriba */
+.profile-box {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  top: 50px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Nombre debajo */
+.profile-name {
+  position: absolute;
+  bottom: 65px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #087DBD;
+  margin: 0;
+  text-align: center;
+  z-index: 3;
+}
+
 
