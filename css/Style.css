@@ -3,7 +3,7 @@ body {
   /* Degradado + imagen de fondo (imagen relativa a la carpeta css) */
   /* poner la imagen primero (capa superior) y el degradado debajo */
   background-image: url('../recursos/imagenes/Fondo-Dibujo-Red.png'),
-                    linear-gradient(to top left, #00BFFF, #ffffff, #ffffff);
+                    linear-gradient(to top left, #d0e8f2, #ffffff);
   min-height: 100vh;
   /* espacio para el header fijo (ajustado a la altura real del header) */
   padding-top: 170px;
@@ -97,20 +97,12 @@ header .container {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  padding: 10px 30px 40px;
-  margin-top: -80px;
-  gap: 30px;
+  padding: 80px 30px 40px;
+  margin-top: 0;
+  gap: 70px;
 }
 
-/* DIV 1: Logo a la izquierda arriba */
-.intro-logo {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-}
-
-/* DIV 2: Título y texto centrados */
+/* DIV 1: Título y texto centrados */
 .intro-content {
   display: flex;
   flex-direction: column;
@@ -134,24 +126,67 @@ header .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 150px;
+  width: 180px;
+  height: 200px;
   flex-shrink: 0;
 }
 
 .card-box {
   width: 100%;
   height: 100%;
-  border: 2px solid #000;
-  border-radius: 15px;
-  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0e8f2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  text-align: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.8rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.25;
 }
 
 /* Header brand stack: small logo with name centered beneath */
 .brand-stack {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 10px;
+}
+
+.logo-deltalogic {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  display: block;
 }
 
 .logo-nombre-small {
