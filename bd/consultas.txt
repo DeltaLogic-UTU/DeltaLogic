@@ -1,0 +1,16 @@
+[
+    {
+        "nombre": "Nacho",
+        "pais": "Uruguay",
+        "email": "arleybarcellos09@gmail.com",
+        "telefono": "091095978",
+        "consulta": "nkbjkh"
+    },
+    {
+        "nombre": "ss",
+        "pais": "sdasd",
+        "email": "asdasd@nasdad",
+        "telefono": "asdad",
+        "consulta": "asdasd"
+    }
+]

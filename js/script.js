@@ -92,45 +92,86 @@ if (modal) {
 // FORMULARIO DE CONTACTO
 // =========================
 const contactForm = document.getElementById('contactForm');
-const formEndpoint = 'https://script.google.com/macros/s/AKfycbxXxFT1Ta_Y0CxKoaDbo2lZ5KMIRNhPkQuwRKgxaJQkvoB6mPJeYQjHlONn-HXM-SNkCQ/exec';
+const formMessage = document.getElementById('formMessage');
+
+// Mostrar un mensaje de estado debajo del formulario.
+function showFormMessage(message, type = 'info') {
+  if (!formMessage) return;
+
+  formMessage.className = `alert mt-3 ${type === 'success' ? 'alert-success' : type === 'danger' ? 'alert-danger' : 'alert-info'}`;
+  formMessage.textContent = message;
+}
+
+// Validar que todos los campos estén completos y que el teléfono tenga 9 dígitos.
+function validarFormulario(datos) {
+  if (!datos.nombre || !datos.pais || !datos.email || !datos.telefono || !datos.consulta) {
+    return 'Todos los campos deben completarse.';
+  }
+
+  const telefonoSoloNumeros = datos.telefono.replace(/\D/g, '');
+  if (telefonoSoloNumeros.length !== 9) {
+    return 'El teléfono debe tener exactamente 9 números.';
+  }
+
+  return null;
+}
 
 if (contactForm) {
   contactForm.addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData.entries());
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton?.textContent || 'Enviar';
 
+    const datosFormulario = {
+      nombre: document.getElementById('nombre')?.value?.trim() || '',
+      pais: document.getElementById('pais')?.value?.trim() || '',
+      email: document.getElementById('email')?.value?.trim() || '',
+      telefono: document.getElementById('telefono')?.value?.trim() || '',
+      consulta: document.getElementById('consulta')?.value?.trim() || ''
+    };
+
+    const errorValidacion = validarFormulario(datosFormulario);
+    if (errorValidacion) {
+      showFormMessage(errorValidacion, 'danger');
+      return;
+    }
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+    }
+
+    // Enviamos el JSON al script PHP local.
     try {
-      const response = await fetch(formEndpoint, {
+      const response = await fetch('bd/bd.php', {
         method: 'POST',
-        mode: 'cors',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(datosFormulario)
       });
 
       if (!response.ok) {
-        throw new Error(`Error HTTP: ${response.status}`);
+        throw new Error(`HTTP ${response.status}`);
       }
 
-      const successMessage = document.createElement('div');
-      successMessage.className = 'alert alert-success mt-3';
-      successMessage.textContent = '¡Gracias! Tu consulta fue enviada correctamente.';
+      const result = await response.json();
 
-      contactForm.appendChild(successMessage);
-      contactForm.reset();
-
-      setTimeout(() => successMessage.remove(), 4000);
+      if (result.status === 'success') {
+        showFormMessage('Consulta enviada correctamente.', 'success');
+        contactForm.reset();
+      } else {
+        showFormMessage(`No se pudo guardar la consulta: ${result.message || 'Error desconocido'}`, 'danger');
+      }
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
-
-      const errorMessage = document.createElement('div');
-      errorMessage.className = 'alert alert-danger mt-3';
-      errorMessage.textContent = 'No se pudo enviar la consulta. Inténtalo nuevamente.';
-
-      contactForm.appendChild(errorMessage);
+      showFormMessage('No se pudo enviar la consulta. Inténtalo nuevamente.', 'danger');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = originalButtonText;
+      }
     }
   });
 }
