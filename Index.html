@@ -124,10 +124,13 @@
       <p class="centered-text">En Delta Logic creemos que cada proyecto es una oportunidad para innovar y generar impacto. Nuestro portafolio refleja soluciones reales que mejoran la gestión y la eficiencia de organizaciones.</p>
     </div>
 
+    <!-- Contenedor principal del carrusel de proyectos: muestra un proyecto por pantalla y permite navegar entre ellos -->
     <div class="project-carousel-wrapper">
+      <!-- Controles de navegación con flechas para avanzar o retroceder -->
       <div class="project-carousel-controls">
         <button class="project-nav-btn" type="button" data-direction="prev" aria-label="Proyecto anterior">&#10094;</button>
 
+        <!-- Área visible del carrusel, donde solo se muestra el slide activo -->
         <div class="project-slide-container">
           <div class="project-slides">
             <article class="project-slide">
@@ -146,7 +149,7 @@
 
             <article class="project-slide">
               <div class="project-card">
-                <h4 class="project-card-title">Proyecto Inventario</h4>
+                <h4 class="project-card-title">Proyecto Inventado</h4>
                 <p class="project-card-text">Este proyecto consiste en el diseño de una landing page inspirada en una tienda Xiaomi en Uruguay. Su objetivo es presentar los productos de la marca mediante una interfaz moderna, atractiva y responsive, brindando una experiencia de navegación simple e intuitiva para el usuario.</p>
                 <div class="project-gallery">
                   <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-1.jpg" alt="foto-1">
@@ -161,6 +164,7 @@
         <button class="project-nav-btn" type="button" data-direction="next" aria-label="Siguiente proyecto">&#10095;</button>
       </div>
 
+      <!-- Puntos que indican cuál proyecto está activo y permiten saltar directamente a uno -->
       <div class="project-dots" aria-label="Selector de proyectos">
         <button class="project-dot active" type="button" data-index="0" aria-label="Ver proyecto 1"></button>
         <button class="project-dot" type="button" data-index="1" aria-label="Ver proyecto 2"></button>
@@ -168,10 +172,87 @@
     </div>
   </section>
 
+  <!-- Modal para ampliar una imagen de la galería al hacer clic -->
   <div id="imageModal" class="image-modal" aria-hidden="true">
     <button class="image-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
     <img id="imageModalImg" src="" alt="Imagen ampliada">
   </div>
+
+  <section id="clientes">
+    <div class="contenido">
+      <h3 class="titulos">Clientes</h3>
+      <p class="texos-centrados">Confían en nosotros empresas y organizaciones que valoran la innovación, la calidad y la cercanía en cada proyecto. Nuestro trabajo se adapta a distintos contextos para convertir ideas en soluciones digitales concretas y duraderas.</p>
+    </div>
+
+    <div class="container py-3">
+      <div class="logo-marquee border rounded-4 p-3 bg-white shadow-sm">
+        <div class="logo-marquee-track">
+          <div class="logo-marquee-group">
+            <img src="recursos/imagenes/Galeria logos clientes/antel.png" alt="ANTEL">
+            <img src="recursos/imagenes/Galeria logos clientes/aseciacion cristiana.jfif" alt="Asociación Cristiana">
+            <img src="recursos/imagenes/Galeria logos clientes/cutsa.png" alt="CUTSA">
+            <img src="recursos/imagenes/Galeria logos clientes/IntendenciaMONTEVIDEO.jfif" alt="Intendencia de Montevideo">
+            <img src="recursos/imagenes/Galeria logos clientes/Ministerio del interior.jfif" alt="Ministerio del Interior">
+            <img src="recursos/imagenes/Galeria logos clientes/sildan seguridad.png" alt="Sildan Seguridad">
+            <img src="recursos/imagenes/Galeria logos clientes/supramar.jfif" alt="Supramar">
+            <img src="recursos/imagenes/Galeria logos clientes/uruguay natural.png" alt="Uruguay Natural">
+          </div>
+          <div class="logo-marquee-group" aria-hidden="true">
+            <img src="recursos/imagenes/Galeria logos clientes/antel.png" alt="ANTEL">
+            <img src="recursos/imagenes/Galeria logos clientes/aseciacion cristiana.jfif" alt="Asociación Cristiana">
+            <img src="recursos/imagenes/Galeria logos clientes/cutsa.png" alt="CUTSA">
+            <img src="recursos/imagenes/Galeria logos clientes/IntendenciaMONTEVIDEO.jfif" alt="Intendencia de Montevideo">
+            <img src="recursos/imagenes/Galeria logos clientes/Ministerio del interior.jfif" alt="Ministerio del Interior">
+            <img src="recursos/imagenes/Galeria logos clientes/sildan seguridad.png" alt="Sildan Seguridad">
+            <img src="recursos/imagenes/Galeria logos clientes/supramar.jfif" alt="Supramar">
+            <img src="recursos/imagenes/Galeria logos clientes/uruguay natural.png" alt="Uruguay Natural">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="contacto">
+    <div class="contenido">
+      <h3 class="titulos">Contáctenos</h3>
+      <p class="texos-centrados">Cuéntanos qué necesitas y te responderemos a la brevedad para comenzar a trabajar en tu proyecto.</p>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="contactForm" class="p-4 rounded-4 bg-white shadow-sm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="pais" class="form-label">País</label>
+                <input type="text" class="form-control" id="pais" name="pais" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="col-12">
+                <label for="consulta" class="form-label">Consulta</label>
+                <textarea class="form-control" id="consulta" name="consulta" rows="5" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary px-4">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- FOOTER -->
   <footer class="footer">

@@ -2,7 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Fondo degradado general de la página */
+/* =========================
+   ESTILOS GENERALES DE LA PÁGINA
+   ========================= */
 body {
   /* Degradado + imagen de fondo (imagen relativa a la carpeta css) */
   /* poner la imagen primero (capa superior) y el degradado debajo */
@@ -20,51 +22,26 @@ body {
   background-size: 180px auto, cover;
 }
 
-/* INICIO DEL ENCABEZADO */
-
-/* Header fijo en la parte superior */
+/* =========================
+   INICIO DEL ENCABEZADO
+   ========================= */
 header {
   border-bottom: 1px solid #ddd;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   z-index: 1032;
 }
 
-/* Ajuste responsivo: header puede ocupar más alto en móviles (logo + nombre + barra) */
-@media (max-width: 767.98px) {
-  body {
-    padding-top: 180px;
-    /* en móviles bajar menos la imagen para que no ocupe tanto espacio */
-    background-position: left 120px, left top;
-  }
-}
-
-/* Reducir el padding del contenedor del header para que sea más fino */
 header .container {
   padding-top: 0.35rem !important;
   padding-bottom: 0.35rem !important;
 }
 
-/* Navbar de Bootstrap: espacio vertical del menú */
 .navbar {
   padding: 0.15rem 0;
 }
 
-/* Tamaño del logo pequeño dentro del header */
 .logo {
   width: 70px;
-}
-
-/* Menú con degradado */
-.nav-link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  background: linear-gradient(to bottom, #424950, #087DBD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  transition: transform 0.3s ease;
 }
 
 .logo-deltalogic {
@@ -75,7 +52,6 @@ header .container {
   display: block;
 }
 
-/* Marca del encabezado */
 .brand-stack {
   display: flex;
   flex-direction: row;
@@ -83,7 +59,21 @@ header .container {
   gap: 10px;
 }
 
-/* Botón del menú hamburguesa */
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
 .navbar-toggler {
   border: 0;
 }
@@ -92,25 +82,11 @@ header .container {
   box-shadow: none;
 }
 
-.nav-link:hover {
-  transform: scale(1.05);
-}
-
 /* FIN DEL ENCABEZADO */
 
-.titulos{
-  background: linear-gradient(to bottom, #424950, #087DBD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-}
-
-
-/* Títulos y texto centrados */
+/* =========================
+   ESTILOS COMPARTIDOS DE TÍTULOS Y CONTENIDO
+   ========================= */
 .content {
   display: flex;
   flex-direction: column;
@@ -125,7 +101,6 @@ header .container {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
   margin: 0 0 0.5rem 0;
   font-size: 1.6rem;
   font-weight: 700;
@@ -140,11 +115,10 @@ header .container {
   text-align: center;
 }
 
-
-/* los section se activan los flexbox, cada section estara
-arriba del otro, pagina tipo edificio */
-
- section {
+/* =========================
+   SECCIONES PRINCIPALES
+   ========================= */
+section {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -155,12 +129,9 @@ arriba del otro, pagina tipo edificio */
   scroll-margin-top: 140px;
 }
 
-
-
-
-
-/* Contenido de Servicios, corresponden a los 4 iconos 
-de desarollo web, aplicaciones, tienda online y mantenimiento */
+/* =========================
+   INTRO / SERVICIOS
+   ========================= */
 .intro-cards {
   display: flex;
   align-items: center;
@@ -221,13 +192,9 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   line-height: 1.25;
 }
 
-/*Finaliza */
-
-
-
-
-
-/* Aca estan los comandos para las Fotos de Perfil */
+/* =========================
+   QUIÉNES SOMOS / FOTOS DE PERFIL
+   ========================= */
 .profile-cards {
   display: flex;
   align-items: center;
@@ -248,7 +215,6 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   position: relative;
 }
 
-/* Cuadrado de fondo girado 30° */
 .profile-background {
   position: absolute;
   width: 160px;
@@ -260,7 +226,6 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   z-index: 1;
 }
 
-/* Cuadrado con la imagen arriba */
 .profile-box {
   position: absolute;
   width: 160px;
@@ -290,7 +255,6 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   border-radius: 20px;
 }
 
-/* Nombre debajo de la foto */
 .profile-name {
   position: absolute;
   bottom: 65px;
@@ -302,8 +266,10 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   z-index: 3;
 }
 
-
-/* Galería de proyectos */
+/* =========================
+   PROYECTOS / CARRUSEL Y GALERÍA
+   ========================= */
+/* Contenedor general del carrusel: organiza las flechas, los slides y los puntos de navegación */
 .project-carousel-wrapper {
   width: min(100%, 980px);
   margin: 0 auto;
@@ -326,6 +292,7 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   padding: 6px;
 }
 
+/* El contenedor de slides se mueve horizontalmente para mostrar solo un proyecto a la vez */
 .project-slides {
   display: flex;
   transition: transform 0.4s ease;
@@ -380,6 +347,8 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Las imágenes de la galería abren el modal al ser clickeadas */
+
 .project-gallery img:hover {
   transform: scale(1.04);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
@@ -423,6 +392,7 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   transform: scale(1.2);
 }
 
+/* Modal de imagen: tapa la pantalla para mostrar una foto ampliada sobre el contenido */
 .image-modal {
   position: fixed;
   inset: 0;
@@ -456,18 +426,65 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   font-size: 2rem;
   cursor: pointer;
 }
-.footer {
-  display: flex;
-  justify-content: end;
-  padding-right: 10px;
+
+/* =========================
+   CLIENTES / MARQUESINA DE LOGOS
+   ========================= */
+.logo-marquee {
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
 }
 
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: logos-scroll 28s linear infinite;
+}
+
+.logo-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 12px;
+  flex-shrink: 0;
+}
+
+.logo-marquee-group img {
+  height: 70px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+@keyframes logos-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 767.98px) {
+  body {
+    padding-top: 180px;
+    background-position: left 120px, left top;
+  }
+
   .project-gallery {
     grid-template-columns: 1fr;
   }
 
   .project-card {
     padding: 22px 16px;
+  }
+
+  .logo-marquee-group img {
+    height: 54px;
+    max-width: 100px;
   }
 }
