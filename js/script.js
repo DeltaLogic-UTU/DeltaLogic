@@ -142,6 +142,10 @@ if (contactForm) {
       submitButton.textContent = 'Enviando...';
     }
 
+    // Mostrar el estado de envío al usuario antes de procesar la respuesta.
+    showFormMessage('Enviando...', 'info');
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
     // Enviamos el JSON al script PHP local.
     try {
       const response = await fetch('bd/bd.php', {
@@ -159,7 +163,7 @@ if (contactForm) {
       const result = await response.json();
 
       if (result.status === 'success') {
-        showFormMessage('Consulta enviada correctamente.', 'success');
+        showFormMessage('Gracias por tu interés en Delta Logic. Tu consulta es el primer paso hacia una solución digital que impulse tu crecimiento. Te responderemos a la brevedad.', 'success');
         contactForm.reset();
       } else {
         showFormMessage(`No se pudo guardar la consulta: ${result.message || 'Error desconocido'}`, 'danger');

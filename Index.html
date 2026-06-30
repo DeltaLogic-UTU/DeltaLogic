@@ -30,10 +30,10 @@
         <!-- Menú desplegable responsive -->
         <div class="collapse navbar-collapse justify-content-end" id="navbarDeltaLogic">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link" href="#quienes-somos">¿Quiénes somos?</a></li>
-            <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contacto">Contáctenos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about-us-title">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#project">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#client">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contáctenos</a></li>
           </ul>
         </div>
       </nav>
@@ -118,7 +118,7 @@
     </div>
 
   </section>
-  <section id="proyectos">s
+  <section id="project">
     <div class="content">
       <h3 class="titles" id="proyectos-title">Proyectos</h3>
       <p class="centered-text">En Delta Logic creemos que cada proyecto es una oportunidad para innovar y generar impacto. Nuestro portafolio refleja soluciones reales que mejoran la gestión y la eficiencia de organizaciones.</p>
@@ -178,9 +178,9 @@
     <img id="imageModalImg" src="" alt="Imagen ampliada">
   </div>
 
-  <section id="clientes">
-    <div class="contenido">
-      <h3 class="titulos">Clientes</h3>
+  <section id="client">
+    <div class="content">
+      <h3 class="titles">Clientes</h3>
       <p class="texos-centrados">Confían en nosotros empresas y organizaciones que valoran la innovación, la calidad y la cercanía en cada proyecto. Nuestro trabajo se adapta a distintos contextos para convertir ideas en soluciones digitales concretas y duraderas.</p>
     </div>
 
@@ -212,10 +212,11 @@
     </div>
   </section>
 
-    <section id="contacto">
-    <div class="contenido">
-      <h3 class="titulos">Contáctenos</h3>
-      <p class="texos-centrados">Cuéntanos qué necesitas y te responderemos a la brevedad para comenzar a trabajar en tu proyecto.</p>
+    <section id="contact">
+    <div class="content">
+      <h3 class="titles">Contáctenos</h3>
+      <h5>Contanos tu idea, nosotros la hacemos realidad</h5><br>
+      <p class="centered-text">En Delta Logic queremos conocer tu proyecto y ayudarte a transformarlo en una solución digital efectiva. Compartí tus objetivos y desafíos: nuestro equipo de desarrolladores Full Stack está listo para diseñar la tecnología que impulse tu crecimiento.</p>
     </div>
 
     <div class="container">
@@ -224,23 +225,23 @@
           <form id="contactForm" class="p-4 rounded-4 bg-white shadow-sm">
             <div class="row g-3">
               <div class="col-md-6">
-                <label for="nombre" class="form-label">Nombre</label>
+                <label for="nombre" class="form-label">Nombre<span style="color: red;">*</span></label>
                 <input type="text" class="form-control" id="nombre" name="nombre" required>
               </div>
               <div class="col-md-6">
-                <label for="pais" class="form-label">País</label>
+                <label for="pais" class="form-label">País<span style="color: red;">*</span></label>
                 <input type="text" class="form-control" id="pais" name="pais" required>
               </div>
               <div class="col-md-6">
-                <label for="email" class="form-label">Email</label>
+                <label for="email" class="form-label">Email<span style="color: red;">*</span></label>
                 <input type="email" class="form-control" id="email" name="email" required>
               </div>
               <div class="col-md-6">
-                <label for="telefono" class="form-label">Teléfono</label>
+                <label for="telefono" class="form-label">Teléfono<span style="color: red;">*</span></label>
                 <input type="tel" class="form-control" id="telefono" name="telefono" required>
               </div>
               <div class="col-12">
-                <label for="consulta" class="form-label">Consulta</label>
+                <label for="consulta" class="form-label">Consulta<span style="color: red;">*</span></label>
                 <textarea class="form-control" id="consulta" name="consulta" rows="5" required></textarea>
               </div>
               <div class="col-12 text-center">
