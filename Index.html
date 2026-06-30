@@ -41,12 +41,12 @@
   </header>
   
   <!-- Sección de intro principal con flexbox -->
-  <section id="intro" class="intro-section">
+  <section >
 
     <!-- DIV 1: Título y texto centrados -->
-    <div class="intro-content">
-      <h3 class="titulo-introduccion">Impulsamos tu transformación digital</h3>
-      <p class="introduccion">En Delta Logic convertimos ideas en soluciones tecnológicas reales. Diseñamos y desarrollamos sitios web, tiendas online y sistemas personalizados que potencian la presencia digital de tu empresa, mejoran su rendimiento y optimizan la experiencia de tus clientes.</p>
+    <div class="contenido">
+      <h3 class="titulos">Impulsamos tu transformación digital</h3>
+      <p class="texos-centrados">En Delta Logic convertimos ideas en soluciones tecnológicas reales. Diseñamos y desarrollamos sitios web, tiendas online y sistemas personalizados que potencian la presencia digital de tu empresa, mejoran su rendimiento y optimizan la experiencia de tus clientes.</p>
     </div>
 
     <!-- DIV 3: 4 cuadrados centrados y separados horizontalmente -->
@@ -84,12 +84,12 @@
   </section>
 
   <!-- Sección: ¿Quiénes somos? -->
-  <section id="quienes-somos" class="quienes-somos-section">
+  <section id="quienes-somos">
     
     <!-- DIV 1: Título y texto -->
-    <div class="quienes-somos-content">
-      <h3 class="quienes-somos-titulo">¿Quiénes somos?</h3>
-      <p class="quienes-somos-texto">Somos un equipo de tres desarrolladores Full Stack apasionados por la tecnología. En Delta Logic combinamos creatividad y experiencia para ofrecer soluciones digitales completas: desde el diseño de interfaces hasta la programación de sistemas robustos. Nuestro objetivo es acompañar a empresas y emprendedores en su crecimiento, brindando proyectos modernos, eficientes y adaptados a cada necesidad.</p>
+    <div class="contenido">
+      <h3 class="titulos" id="quienes-somos-title">¿Quiénes somos?</h3>
+      <p class="texos-centrados">Somos un equipo de tres desarrolladores Full Stack apasionados por la tecnología. En Delta Logic combinamos creatividad y experiencia para ofrecer soluciones digitales completas: desde el diseño de interfaces hasta la programación de sistemas robustos. Nuestro objetivo es acompañar a empresas y emprendedores en su crecimiento, brindando proyectos modernos, eficientes y adaptados a cada necesidad.</p>
     </div>
 
     <!-- DIV 2: 3 Profile Cards -->
@@ -118,6 +118,60 @@
     </div>
 
   </section>
+  <section id="proyectos">
+    <div class="contenido">
+      <h3 class="titulos" id="proyectos-title">Proyectos</h3>
+      <p class="texos-centrados">En Delta Logic creemos que cada proyecto es una oportunidad para innovar y generar impacto. Nuestro portafolio refleja soluciones reales que mejoran la gestión y la eficiencia de organizaciones.</p>
+    </div>
+
+    <div class="project-carousel-wrapper">
+      <div class="project-carousel-controls">
+        <button class="project-nav-btn" type="button" data-direction="prev" aria-label="Proyecto anterior">&#10094;</button>
+
+        <div class="project-slide-container">
+          <div class="project-slides">
+            <article class="project-slide">
+              <div class="project-card">
+                <h4 class="project-card-title">SiGeRu - Sistema de Gestión de Residuos Urbanos</h4>
+                <p class="project-card-text">Desarrollado para la Intendencia de Montevideo, SiGeRU es una plataforma que integra mapas interactivos, gestión de contenedores y monitoreo de flota en tiempo real. Este sistema optimiza la recolección de residuos y facilita la comunicación entre ciudadanos y autoridades.</p>
+                <div class="project-gallery">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-1.jpg" alt="Apartado Rutas">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-2.jpg" alt="Apartado Reclamos">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-3.jpg" alt="Apartado Contenedores">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-4.jpg" alt="Apartado Camiones">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-5.jpg" alt="Apartado vecino ">
+                </div>
+              </div>
+            </article>
+
+            <article class="project-slide">
+              <div class="project-card">
+                <h4 class="project-card-title">Proyecto Inventario</h4>
+                <p class="project-card-text">Este proyecto consiste en el diseño de una landing page inspirada en una tienda Xiaomi en Uruguay. Su objetivo es presentar los productos de la marca mediante una interfaz moderna, atractiva y responsive, brindando una experiencia de navegación simple e intuitiva para el usuario.</p>
+                <div class="project-gallery">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-1.jpg" alt="foto-1">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-2.jpg" alt="foto-2">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-3.jpg" alt="foto-3">
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="project-nav-btn" type="button" data-direction="next" aria-label="Siguiente proyecto">&#10095;</button>
+      </div>
+
+      <div class="project-dots" aria-label="Selector de proyectos">
+        <button class="project-dot active" type="button" data-index="0" aria-label="Ver proyecto 1"></button>
+        <button class="project-dot" type="button" data-index="1" aria-label="Ver proyecto 2"></button>
+      </div>
+    </div>
+  </section>
+
+  <div id="imageModal" class="image-modal" aria-hidden="true">
+    <button class="image-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
+    <img id="imageModalImg" src="" alt="Imagen ampliada">
+  </div>
 
   <!-- FOOTER -->
   <footer>
@@ -125,6 +179,6 @@
   </footer>
 
   <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/scrip.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

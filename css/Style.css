@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Fondo degradado general de la página */
 body {
   /* Degradado + imagen de fondo (imagen relativa a la carpeta css) */
@@ -15,6 +19,8 @@ body {
   /* aumentar solo la imagen (primera capa) */
   background-size: 180px auto, cover;
 }
+
+/* INICIO DEL ENCABEZADO */
 
 /* Header fijo en la parte superior */
 header {
@@ -61,7 +67,38 @@ header .container {
   transition: transform 0.3s ease;
 }
 
-.titulo-introduccion{
+.logo-deltalogic {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  display: block;
+}
+
+/* Marca del encabezado */
+.brand-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Botón del menú hamburguesa */
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+/* FIN DEL ENCABEZADO */
+
+.titulos{
   background: linear-gradient(to bottom, #424950, #087DBD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -72,38 +109,9 @@ header .container {
   font-weight: 700;
 }
 
-.introduccion{
-  max-width: 720px;
-  margin: 0.25rem auto 0 auto;
-  color: #23303a;
-  line-height: 1.6;
-  text-align: center;
-}
-.nav-link:hover {
-  transform: scale(1.05);
-}
 
-.navbar-toggler {
-  border: 0;
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-}
-
-/* Intro con flexbox vertical */
-.intro-section {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding: 80px 30px 40px;
-  margin-top: 0;
-  gap: 70px;
-}
-
-/* DIV 1: Título y texto centrados */
-.intro-content {
+/* Títulos y texto centrados */
+.contenido {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -112,7 +120,47 @@ header .container {
   text-align: center;
 }
 
-/* DIV 3: 4 cuadrados centrados y separados horizontalmente */
+.titulos {
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.texos-centrados {
+  max-width: 720px;
+  margin: 0.25rem auto 0 auto;
+  color: #23303a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+
+/* los section se activan los flexbox, cada section estara
+arriba del otro, pagina tipo edificio */
+
+ section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 80px 30px 40px;
+  margin-top: 0;
+  gap: 70px;
+  scroll-margin-top: 140px;
+}
+
+
+
+
+
+/* Contenido de Servicios, corresponden a los 4 iconos 
+de desarollo web, aplicaciones, tienda online y mantenimiento */
 .intro-cards {
   display: flex;
   align-items: center;
@@ -173,70 +221,13 @@ header .container {
   line-height: 1.25;
 }
 
-/* Header brand stack: small logo with name centered beneath */
-.brand-stack {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
+/*Finaliza */
 
-.logo-deltalogic {
-  width: 120px;
-  max-width: 100%;
-  height: auto;
-  margin-top: 0;
-  display: block;
-}
 
-.logo-nombre-small {
-  width: 160px;
-  max-width: 100%;
-  height: auto;
-  margin-top: 4px;
-  display: block;
-}
 
-/* Sección ¿Quiénes somos? */
-.quienes-somos-section {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: flex-start;
-  padding: 80px 30px 40px;
-  gap: 70px;
-}
 
-/* DIV 1: Título y texto */
-.quienes-somos-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  text-align: center;
-}
 
-.quienes-somos-titulo {
-  background: linear-gradient(to bottom, #424950, #087DBD);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-  margin: 0 0 0.5rem 0;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-
-.quienes-somos-texto {
-  max-width: 720px;
-  margin: 0.25rem auto 0 auto;
-  color: #23303a;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* DIV 2: Profile Cards */
+/* Aca estan los comandos para las Fotos de Perfil */
 .profile-cards {
   display: flex;
   align-items: center;
@@ -262,7 +253,7 @@ header .container {
   position: absolute;
   width: 160px;
   height: 160px;
-  background: linear-gradient(135deg, #e8e8e8 0%, #d0e8f2 100%);
+  background: linear-gradient(135deg, #c7cfdb 0%, #556268 100%);
   border-radius: 5px;
   transform: rotate(30deg);
   top: 60px;
@@ -299,7 +290,7 @@ header .container {
   border-radius: 20px;
 }
 
-/* Nombre debajo */
+/* Nombre debajo de la foto */
 .profile-name {
   position: absolute;
   bottom: 65px;
@@ -312,3 +303,166 @@ header .container {
 }
 
 
+/* Galería de proyectos */
+.project-carousel-wrapper {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.project-slide-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 24px;
+  padding: 6px;
+}
+
+.project-slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.project-slide {
+  min-width: 100%;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ffffff 0%, #eef7fb 100%);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(8, 125, 189, 0.14);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-card-title {
+  margin: 0;
+  text-align: center;
+  color: #087DBD;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.project-card-text {
+  margin: 0;
+  max-width: 760px;
+  text-align: center;
+  color: #23303a;
+  line-height: 1.6;
+}
+
+.project-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #dce9ef;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.project-nav-btn {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #087DBD;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-nav-btn:hover {
+  transform: scale(1.05);
+  background: #065f8f;
+}
+
+.project-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.project-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #b7c9d3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-dot.active {
+  background: #087DBD;
+  transform: scale(1.2);
+}
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 22px 16px;
+  }
+}
