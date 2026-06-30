@@ -111,7 +111,7 @@ header .container {
 
 
 /* Títulos y texto centrados */
-.contenido {
+.content {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,7 +120,7 @@ header .container {
   text-align: center;
 }
 
-.titulos {
+.titles {
   background: linear-gradient(to bottom, #424950, #087DBD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,7 +132,7 @@ header .container {
   text-align: center;
 }
 
-.texos-centrados {
+.centered-text {
   max-width: 720px;
   margin: 0.25rem auto 0 auto;
   color: #23303a;
@@ -455,6 +455,11 @@ de desarollo web, aplicaciones, tienda online y mantenimiento */
   color: white;
   font-size: 2rem;
   cursor: pointer;
+}
+.footer {
+  display: flex;
+  justify-content: end;
+  padding-right: 10px;
 }
 
 @media (max-width: 767.98px) {
