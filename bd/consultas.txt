@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Nacho",
+        "pais": "Uruguay",
+        "email": "arleybarcellos09@gmail.com",
+        "telefono": "091095978",
+        "consulta": "nkbjkh"
+    },
+    {
+        "nombre": "ss",
+        "pais": "sdasd",
+        "email": "asdasd@nasdad",
+        "telefono": "asdad",
+        "consulta": "asdasd"
+    },
+    {
+        "nombre": "pepe",
+        "pais": "uruguay",
+        "email": "nacho@gmail.com",
+        "telefono": "123456789",
+        "consulta": "hola"
+    },
+    {
+        "nombre": "Nacho",
+        "pais": "Uruguay",
+        "email": "arleybarcellos09@gmail.com",
+        "telefono": "091095978",
+        "consulta": "fdsd"
+    }
+]

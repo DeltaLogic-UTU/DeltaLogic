@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delta Logic</title>
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/Style.css">
+</head>
+<body>
+
+
+  <!-- Header fijo en la parte superior -->
+  <header class="shadow-sm bg-white fixed-top">
+    <div class="container py-3">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white px-0">
+        <!-- Logo principal del header: logo pequeño + nombre debajo, centrados -->
+        <a class="navbar-brand me-3" href="#">
+          <div class="brand-stack">
+            <img src="recursos/imagenes/Logo sin nombre.png" alt="Logo Delta Logic" class="logo">
+            <img src="recursos/imagenes/Delta%20Logic.png" alt="Delta Logic" class="logo-deltalogic">
+          </div>
+        </a>
+
+        <!-- Botón hamburguesa visible en pantallas pequeñas -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDeltaLogic" aria-controls="navbarDeltaLogic" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú desplegable responsive -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarDeltaLogic">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about-us-title">¿Quiénes somos?</a></li>
+            <li class="nav-item"><a class="nav-link" href="#project">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#client">Clientes</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contáctenos</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Sección de intro principal con flexbox -->
+  <section >
+
+    <!-- DIV 1: Título y texto centrados -->
+    <div class="content">
+      <h3 class="titles">Impulsamos tu transformación digital</h3>
+      <p class="centered-text">En Delta Logic convertimos ideas en soluciones tecnológicas reales. Diseñamos y desarrollamos sitios web, tiendas online y sistemas personalizados que potencian la presencia digital de tu empresa, mejoran su rendimiento y optimizan la experiencia de tus clientes.</p>
+    </div>
+
+    <!-- DIV 3: 4 cuadrados centrados y separados horizontalmente -->
+    <div class="intro-cards">
+      <div class="card-item">
+        <div class="card-box">
+          <img src="recursos/iconos/WEB.png" alt="Desarrollo Web" class="card-icon">
+          <h3 class="card-title">Desarrollo Web</h3>
+          <p class="card-description">Diseñamos sitios web modernos, rápidos y adaptables que reflejan la esencia de tu marca.</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-box">
+          <img src = "recursos/iconos/APP.png" alt="Aplicaciones Móviles" class="card-icon">
+          <h3 class="card-title">Aplicaciones</h3>
+          <p class="card-description">Creamos aplicaciones personalizadas para optimizar procesos y conectar mejor tu negocio.</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-box">
+          <img src="recursos/iconos/TIENDA.png" alt="Tiendas Online" class="card-icon">
+          <h3 class="card-title">Tiendas Online</h3>
+          <p class="card-description">Desarrollamos tiendas virtuales funcionales y seguras, listas para vender desde el primer día.</p>
+        </div>
+      </div>
+      <div class="card-item">
+        <div class="card-box">
+          <img src="recursos/iconos/MANTENIMIENTO.png" alt="Mantenimiento y Soporte" class="card-icon">
+          <h3 class="card-title">Mantenimiento</h3> 
+          <p class="card-description">Ofrecemos servicios de mantenimiento y soporte técnico para garantizar el correcto funcionamiento de tus sistemas.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Sección: ¿Quiénes somos? -->
+  <section>
+    
+    <!-- DIV 1: Título y texto -->
+    <div class="content">
+      <h3 class="titles" id="about-us-title">¿Quiénes somos?</h3>
+      <p class="centered-text">Somos un equipo de tres desarrolladores Full Stack apasionados por la tecnología. En Delta Logic combinamos creatividad y experiencia para ofrecer soluciones digitales completas: desde el diseño de interfaces hasta la programación de sistemas robustos. Nuestro objetivo es acompañar a empresas y emprendedores en su crecimiento, brindando proyectos modernos, eficientes y adaptados a cada necesidad.</p>
+    </div>
+
+    <!-- DIV 2: 3 Profile Cards -->
+    <div class="profile-cards">
+      <div class="profile-item">
+        <div class="profile-background"></div>
+        <div class="profile-box">
+          <img src="recursos/imagenes/JoseEchenique.png" alt="Perfil 1" class="profile-image">
+        </div>
+        <p class="profile-name">José Echenique</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-background"></div>
+        <div class="profile-box">
+          <img src="recursos/imagenes/MarshallFernandez.png" alt="Perfil 2" class="profile-image">
+        </div>
+        <p class="profile-name">Marshall Fernandez</p>
+      </div>
+      <div class="profile-item">
+        <div class="profile-background"></div>
+        <div class="profile-box">
+          <img src="recursos/imagenes/CirceCamargo.png" alt="Perfil 3" class="profile-image">
+        </div>
+        <p class="profile-name">Circe Camargo</p>
+      </div>
+    </div>
+
+  </section>
+  <section id="project">
+    <div class="content">
+      <h3 class="titles" id="proyectos-title">Proyectos</h3>
+      <p class="centered-text">En Delta Logic creemos que cada proyecto es una oportunidad para innovar y generar impacto. Nuestro portafolio refleja soluciones reales que mejoran la gestión y la eficiencia de organizaciones.</p>
+    </div>
+
+    <!-- Contenedor principal del carrusel de proyectos: muestra un proyecto por pantalla y permite navegar entre ellos -->
+    <div class="project-carousel-wrapper">
+      <!-- Controles de navegación con flechas para avanzar o retroceder -->
+      <div class="project-carousel-controls">
+        <button class="project-nav-btn" type="button" data-direction="prev" aria-label="Proyecto anterior">&#10094;</button>
+
+        <!-- Área visible del carrusel, donde solo se muestra el slide activo -->
+        <div class="project-slide-container">
+          <div class="project-slides">
+            <article class="project-slide">
+              <div class="project-card">
+                <h4 class="project-card-title">SiGeRu - Sistema de Gestión de Residuos Urbanos</h4>
+                <p class="project-card-text">Desarrollado para la Intendencia de Montevideo, SiGeRU es una plataforma que integra mapas interactivos, gestión de contenedores y monitoreo de flota en tiempo real. Este sistema optimiza la recolección de residuos y facilita la comunicación entre ciudadanos y autoridades.</p>
+                <div class="project-gallery">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-1.jpg" alt="Apartado Rutas">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-2.jpg" alt="Apartado Reclamos">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-3.jpg" alt="Apartado Contenedores">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-4.jpg" alt="Apartado Camiones">
+                  <img src="recursos/imagenes/Galeria SiGeRu/Foto-5.jpg" alt="Apartado vecino ">
+                </div>
+              </div>
+            </article>
+
+            <article class="project-slide">
+              <div class="project-card">
+                <h4 class="project-card-title">Proyecto Inventado</h4>
+                <p class="project-card-text">Este proyecto consiste en el diseño de una landing page inspirada en una tienda Xiaomi en Uruguay. Su objetivo es presentar los productos de la marca mediante una interfaz moderna, atractiva y responsive, brindando una experiencia de navegación simple e intuitiva para el usuario.</p>
+                <div class="project-gallery">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-1.jpg" alt="foto-1">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-2.jpg" alt="foto-2">
+                  <img src="recursos/imagenes/Galeria Poyecto inventado/Foto-3.jpg" alt="foto-3">
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <button class="project-nav-btn" type="button" data-direction="next" aria-label="Siguiente proyecto">&#10095;</button>
+      </div>
+
+      <!-- Puntos que indican cuál proyecto está activo y permiten saltar directamente a uno -->
+      <div class="project-dots" aria-label="Selector de proyectos">
+        <button class="project-dot active" type="button" data-index="0" aria-label="Ver proyecto 1"></button>
+        <button class="project-dot" type="button" data-index="1" aria-label="Ver proyecto 2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal para ampliar una imagen de la galería al hacer clic -->
+  <div id="imageModal" class="image-modal" aria-hidden="true">
+    <button class="image-modal-close" type="button" aria-label="Cerrar imagen">&times;</button>
+    <img id="imageModalImg" src="" alt="Imagen ampliada">
+  </div>
+
+  <section id="client">
+    <div class="content">
+      <h3 class="titles">Clientes</h3>
+      <p class="texos-centrados">Confían en nosotros empresas y organizaciones que valoran la innovación, la calidad y la cercanía en cada proyecto. Nuestro trabajo se adapta a distintos contextos para convertir ideas en soluciones digitales concretas y duraderas.</p>
+    </div>
+
+    <div class="container py-3">
+      <div class="logo-marquee border rounded-4 p-3 bg-white shadow-sm">
+        <div class="logo-marquee-track">
+          <div class="logo-marquee-group">
+            <img src="recursos/imagenes/Galeria logos clientes/antel.png" alt="ANTEL">
+            <img src="recursos/imagenes/Galeria logos clientes/aseciacion cristiana.jfif" alt="Asociación Cristiana">
+            <img src="recursos/imagenes/Galeria logos clientes/cutsa.png" alt="CUTSA">
+            <img src="recursos/imagenes/Galeria logos clientes/IntendenciaMONTEVIDEO.jfif" alt="Intendencia de Montevideo">
+            <img src="recursos/imagenes/Galeria logos clientes/Ministerio del interior.jfif" alt="Ministerio del Interior">
+            <img src="recursos/imagenes/Galeria logos clientes/sildan seguridad.png" alt="Sildan Seguridad">
+            <img src="recursos/imagenes/Galeria logos clientes/supramar.jfif" alt="Supramar">
+            <img src="recursos/imagenes/Galeria logos clientes/uruguay natural.png" alt="Uruguay Natural">
+          </div>
+          <div class="logo-marquee-group" aria-hidden="true">
+            <img src="recursos/imagenes/Galeria logos clientes/antel.png" alt="ANTEL">
+            <img src="recursos/imagenes/Galeria logos clientes/aseciacion cristiana.jfif" alt="Asociación Cristiana">
+            <img src="recursos/imagenes/Galeria logos clientes/cutsa.png" alt="CUTSA">
+            <img src="recursos/imagenes/Galeria logos clientes/IntendenciaMONTEVIDEO.jfif" alt="Intendencia de Montevideo">
+            <img src="recursos/imagenes/Galeria logos clientes/Ministerio del interior.jfif" alt="Ministerio del Interior">
+            <img src="recursos/imagenes/Galeria logos clientes/sildan seguridad.png" alt="Sildan Seguridad">
+            <img src="recursos/imagenes/Galeria logos clientes/supramar.jfif" alt="Supramar">
+            <img src="recursos/imagenes/Galeria logos clientes/uruguay natural.png" alt="Uruguay Natural">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section id="contact">
+    <div class="content">
+      <h3 class="titles">Contáctenos</h3>
+      <h5>Contanos tu idea, nosotros la hacemos realidad</h5><br>
+      <p class="centered-text">En Delta Logic queremos conocer tu proyecto y ayudarte a transformarlo en una solución digital efectiva. Compartí tus objetivos y desafíos: nuestro equipo de desarrolladores Full Stack está listo para diseñar la tecnología que impulse tu crecimiento.</p>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form id="contactForm" class="p-4 rounded-4 bg-white shadow-sm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+              </div>
+              <div class="col-md-6">
+                <label for="pais" class="form-label">País<span style="color: red;">*</span></label>
+                <input type="text" class="form-control" id="pais" name="pais" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email<span style="color: red;">*</span></label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono<span style="color: red;">*</span></label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" required>
+              </div>
+              <div class="col-12">
+                <label for="consulta" class="form-label">Consulta<span style="color: red;">*</span></label>
+                <textarea class="form-control" id="consulta" name="consulta" rows="5" required></textarea>
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="btn btn-primary px-4">Enviar</button>
+              </div>
+            </div>
+            <div id="formMessage" class="mt-3" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Delta Logic - Todos los derechos reservados</p>
+  </footer>
+
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

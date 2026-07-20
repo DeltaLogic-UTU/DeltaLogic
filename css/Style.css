@@ -1,0 +1,490 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================
+   ESTILOS GENERALES DE LA PÁGINA
+   ========================= */
+body {
+  /* Degradado + imagen de fondo (imagen relativa a la carpeta css) */
+  /* poner la imagen primero (capa superior) y el degradado debajo */
+  background-image: url('../recursos/imagenes/Fondo-Dibujo-Red.png'),
+                    linear-gradient(to top left, #d0e8f2, #ffffff);
+  min-height: 100vh;
+  /* espacio para el header fijo (ajustado a la altura real del header) */
+  padding-top: 170px;
+
+  /* Configuración por capa: imagen arriba, degradado debajo */
+  background-repeat: no-repeat, no-repeat;
+  /* imagen (capa 1) desplazada más abajo a la izquierda; degradado debajo */
+  background-position: left 220px, left top;
+  /* aumentar solo la imagen (primera capa) */
+  background-size: 180px auto, cover;
+}
+
+/* =========================
+   INICIO DEL ENCABEZADO
+   ========================= */
+header {
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1032;
+}
+
+header .container {
+  padding-top: 0.35rem !important;
+  padding-bottom: 0.35rem !important;
+}
+
+.navbar {
+  padding: 0.15rem 0;
+}
+
+.logo {
+  width: 70px;
+}
+
+.logo-deltalogic {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0;
+  display: block;
+}
+
+.brand-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* FIN DEL ENCABEZADO */
+
+/* =========================
+   ESTILOS COMPARTIDOS DE TÍTULOS Y CONTENIDO
+   ========================= */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.titles {
+  background: linear-gradient(to bottom, #424950, #087DBD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.centered-text {
+  max-width: 720px;
+  margin: 0.25rem auto 0 auto;
+  color: #23303a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* =========================
+   SECCIONES PRINCIPALES
+   ========================= */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 80px 30px 40px;
+  margin-top: 0;
+  gap: 70px;
+  scroll-margin-top: 140px;
+}
+
+/* =========================
+   INTRO / SERVICIOS
+   ========================= */
+.intro-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 200px;
+  flex-shrink: 0;
+}
+
+.card-box {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #e8e8e8 0%, #d0e8f2 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  text-align: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.card-description {
+  font-size: 0.8rem;
+  color: #444;
+  margin: 0;
+  line-height: 1.25;
+}
+
+/* =========================
+   QUIÉNES SOMOS / FOTOS DE PERFIL
+   ========================= */
+.profile-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.profile-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 320px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.profile-background {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  background: linear-gradient(135deg, #c7cfdb 0%, #556268 100%);
+  border-radius: 5px;
+  transform: rotate(30deg);
+  top: 60px;
+  z-index: 1;
+}
+
+.profile-box {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: none;
+  border-radius: 20px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  top: 50px;
+  z-index: 2;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.profile-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.profile-name {
+  position: absolute;
+  bottom: 65px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #087DBD;
+  margin: 0;
+  text-align: center;
+  z-index: 3;
+}
+
+/* =========================
+   PROYECTOS / CARRUSEL Y GALERÍA
+   ========================= */
+/* Contenedor general del carrusel: organiza las flechas, los slides y los puntos de navegación */
+.project-carousel-wrapper {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.project-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.project-slide-container {
+  overflow: hidden;
+  width: 100%;
+  border-radius: 24px;
+  padding: 6px;
+}
+
+/* El contenedor de slides se mueve horizontalmente para mostrar solo un proyecto a la vez */
+.project-slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.project-slide {
+  min-width: 100%;
+}
+
+.project-card {
+  background: linear-gradient(135deg, #ffffff 0%, #eef7fb 100%);
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(8, 125, 189, 0.14);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-card-title {
+  margin: 0;
+  text-align: center;
+  color: #087DBD;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.project-card-text {
+  margin: 0;
+  max-width: 760px;
+  text-align: center;
+  color: #23303a;
+  line-height: 1.6;
+}
+
+.project-gallery {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.project-gallery img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 1px solid #dce9ef;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  cursor: zoom-in;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Las imágenes de la galería abren el modal al ser clickeadas */
+
+.project-gallery img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.16);
+}
+
+.project-nav-btn {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #087DBD;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.project-nav-btn:hover {
+  transform: scale(1.05);
+  background: #065f8f;
+}
+
+.project-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.project-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #b7c9d3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.project-dot.active {
+  background: #087DBD;
+  transform: scale(1.2);
+}
+
+/* Modal de imagen: tapa la pantalla para mostrar una foto ampliada sobre el contenido */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.image-modal.active {
+  display: flex;
+}
+
+.image-modal img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  border: none;
+  background: transparent;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* =========================
+   CLIENTES / MARQUESINA DE LOGOS
+   ========================= */
+.logo-marquee {
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+}
+
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: logos-scroll 28s linear infinite;
+}
+
+.logo-marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 12px;
+  flex-shrink: 0;
+}
+
+.logo-marquee-group img {
+  height: 70px;
+  max-width: 140px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.9;
+}
+
+@keyframes logos-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 180px;
+    background-position: left 120px, left top;
+  }
+
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 22px 16px;
+  }
+
+  .logo-marquee-group img {
+    height: 54px;
+    max-width: 100px;
+  }
+}
